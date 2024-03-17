@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rows</title>
+</head>
+<body>
+    <script>
+        const line1 = prompt("First");
+        const line2 = prompt("Second"); 
+        const line3 = prompt("Third");
+        lines = [line1, line2, line3]
+        console.log(lines.sort(() => Math.random() - 0.5).join('\n'));
+    </script>
+</body>
+</html>

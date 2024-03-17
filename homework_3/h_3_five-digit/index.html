@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-digit</title>
+</head>
+<body>
+    <script>
+        function promptWithMaxLength(maxLength) {
+            let input;
+            do {
+                input = prompt(`Write 5-digit number`);
+            } while (input.length !== maxLength);
+            return input;
+        }
+        const maxLength = 5; // Change this to your desired maximum length
+        const userInput = promptWithMaxLength(maxLength);
+        const digits = userInput.toString().split('').join(' ');
+        console.log(digits);
+    </script>
+</body>
+</html>
