@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userPortrait</title>
+</head>
+<body>
+    <script>
+        function age(){
+            const currentYear = 2024;
+            const yearOfBirth = prompt('Коли народився?');
+            age = currentYear - yearOfBirth;
+        }
+        age();
+
+        const city = prompt("У якому місті ви живете?");
+
+        const favoriteSport = prompt("Який ваш улюблений вид спорту?");
+
+        let message;
+
+        if (city === "Київ" || "Амстердам" || "Варшава") {
+            switch (city) {
+                case "Київ":
+                    message = `Ти живеш у столиці України, ${favoriteSport} - це круто!`;
+                    break;
+                case "Амстердам":
+                    message = `Ти живеш у столиці Нідерландів, ${favoriteSport} - це круто!`;
+                    break;
+                case "Варшава":
+                    message = `Ти живеш у столиці Польщі, ${favoriteSport} - це круто!`;
+                    break;
+                default:
+                    message = `Ти живеш у місті ${city}, ${favoriteSport} - це круто!`;
+                    break;
+            }
+        } else {
+            message = `Ти живеш у місті ${city}, ${favoriteSport} - це круто!`;
+        }
+
+        alert(`Ваш вік: ${age}\n${message}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers_Checker</title>
+</head>
+<body>
+    <script>
+       const userInput = prompt("Будь ласка, введіть тризначне число:");
+
+        if (userInput.length !== 3 || isNaN(userInput)) {
+            alert("Це не тризначне число, оновіть сторінку.");
+        } else {
+            const firstDigit = userInput.charAt(0);
+            const allDigitsSame = userInput.split('').every(digit => digit === firstDigit);
+            const anyDigitsSame = new Set(userInput.split('')).size < 3;
+
+            alert(`Усі цифри ${allDigitsSame ? '' : 'не'} однакові. Серед цифр ${anyDigitsSame ? 'є' : 'немає'} однакових.`);
+        }
+    </script>
+</body>
+</html>
