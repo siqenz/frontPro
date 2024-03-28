@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+</head>
+<body>
+    <script>
+        const n = prompt('Введіть число')
+        var p = true;
+
+        if (!isNaN(n)){
+            if (n == 1) {
+            p = true;
+            } 
+            else {
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    p = false;
+                    break;
+                }
+            }
+            }
+            if (p) {
+            alert("Це число є просте.");
+            } 
+            else {
+            alert("Це число не є просте.");
+            }
+        }
+        else { 
+               alert("Оновіть сторінку, та введіть ЧИСЛО будь ласка"); 
+        }
+    </script>
+</body>
+</html>
