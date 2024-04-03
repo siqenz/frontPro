@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic mean</title>
+</head>
+<body>
+    <script>
+        function arithmeticMean(massive){
+            let summary = 0
+            let count = 0
+
+            for(let i=0; i < massive.length; i++){
+                if(typeof massive[i] == "number" && !isNaN(massive[i])){
+                    summary += massive[i];
+                    count++;
+                }
+            }
+            
+            if (count == 0){
+                return alert("there is no numbers in an array");
+            }
+            else {
+                return summary / count;
+            }
+        }
+
+        const array = [1, 60, 'show', '31', 5, 'boolean'];
+        const average = arithmeticMean(array);
+        alert(average);
+    </script>
+</body>
+</html>

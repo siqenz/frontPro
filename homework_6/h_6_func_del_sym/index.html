@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function to delete an array of characters</title>
+</head>
+<body>
+    <script>
+        function removeCharacters() {
+            const input = prompt('Введіть рядок');
+            const charactersToRemove = prompt('Введіть символи для видалення через пробіл');
+
+            const result = input.replace(RegExp(`[${charactersToRemove.replace(/\s/g, '')}]`, 'g'), ''); 
+            // replace - для заміни рядка іншим;
+            // RegExp - Для пошуку та заміни тексту;
+            // (/\s/g, '') - для того щоб не видалялись пробіли;
+            // g - глобальний флаг ,щоб пошук не прибинявся після першого збігу;
+            
+            return result;
+        }
+
+        const resultOfRemoval = removeCharacters();
+        console.log(resultOfRemoval);
+    </script>
+</body>
+</html>

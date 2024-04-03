@@ -7,22 +7,22 @@
 </head>
 <body>
     <script>
-        const n = prompt('Введіть число')
-        var p = true;
+        const number = prompt('Введіть число')
+        let prime = true;
 
-        if (!isNaN(n)){
-            if (n == 1) {
-            p = true;
+        if (!isNaN(number)){
+            if (number <= 1) {
+            prime = false;
             } 
             else {
-            for (let i = 2; i < n; i++) {
-                if (n % i === 0) {
-                    p = false;
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    prime = false;
                     break;
                 }
             }
             }
-            if (p) {
+            if (prime) {
             alert("Це число є просте.");
             } 
             else {
